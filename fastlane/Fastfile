@@ -1,0 +1,13 @@
+fastlane_version '2.200.0'
+
+skip_docs
+
+##############
+### UPDATE ###
+##############
+
+desc 'Update metadata from the libPhoneNumber'
+lane :update_metadata do 
+    # Update the code.
+    update_phone_metadata
+end
