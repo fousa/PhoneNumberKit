@@ -8,6 +8,9 @@ skip_docs
 
 desc 'Update metadata from the libPhoneNumber'
 lane :update_metadata do 
+    # Make sure we run this lane on the master branch.
+    ensure_git_branch branch: 'master'
+
     # Update the code.
     update_phone_metadata
 end
