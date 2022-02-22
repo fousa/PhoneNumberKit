@@ -18,6 +18,9 @@ lane :update_metadata do
     git_commit path:    'PhoneNumberKit/Resources/*',
                message: 'Update the metadata to the latest version'
 
+    # Tag this commit
+    add_git_tag tag: "metadata/#{Time.now.strftime('%F%T').gsub(/[-:]/, '')}"
+
     # Push the code to Github.
     push_to_git_remote
 end
