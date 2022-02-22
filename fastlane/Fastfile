@@ -13,4 +13,11 @@ lane :update_metadata do
 
     # Update the code.
     update_phone_metadata
+
+    # Commit the code
+    git_commit path:    'PhoneNumberKit/Resources/*',
+               message: 'Update the metadata to the latest version'
+
+    # Push the code to Github.
+    push_to_git_remote
 end
